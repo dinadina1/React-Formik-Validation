@@ -4,6 +4,7 @@ import React, { createContext, useEffect, useState } from 'react'
 const ContextData = createContext({});
 export const LibraryContext = ({ children }) => {
 
+  // States
   const [bookLists, setBookLists] = useState([]);
   const [authorLists, setAuthorLists] = useState([]);
   const [apiState, setApiState] = useState(true);
@@ -18,9 +19,11 @@ export const LibraryContext = ({ children }) => {
   const [authorBirth, setAuthorBirth] = useState('');
   const [authorBio, setAuthorBio] = useState('');
 
+  // API Urls
   const BOOK_API_URL = 'https://660c281e3a0766e85dbd8fa0.mockapi.io/library';
   const AUTHOR_API_URL = 'https://660da3ee6ddfa2943b34e888.mockapi.io/libraryauthor'
 
+  // Get data from book API
   useEffect(() => {
     const api_Response = async () => {
       try {
@@ -34,6 +37,7 @@ export const LibraryContext = ({ children }) => {
     api_Response();
   }, [apiState])
 
+  // Get data from author API
   useEffect(() => {
     const apiRes = async () => {
       try {
@@ -46,6 +50,7 @@ export const LibraryContext = ({ children }) => {
     apiRes();
   }, [apiStates])
 
+  // Function to Add new book
   const addBook = async (title) => {
     try {
       const input = title.split(",");
@@ -64,6 +69,7 @@ export const LibraryContext = ({ children }) => {
     }
   }
 
+   // Function to remove book
   const removeBook = async (id) => {
     try {
       setBookLists(bookLists.filter((book) => book.id != id));
@@ -74,6 +80,7 @@ export const LibraryContext = ({ children }) => {
     }
   }
 
+   // Function to Update book
   const updateBook = async (data) => {
     try {
       const input = data.split(",");
@@ -92,6 +99,7 @@ export const LibraryContext = ({ children }) => {
     }
   }
 
+// Function to calcel and reset states
   const cancelEdit = () => {
     setBookTitle('');
     setBookAuthor('');
@@ -102,6 +110,7 @@ export const LibraryContext = ({ children }) => {
     setAuthorBio('');
   }
 
+   // Function to Add new author
   const addAuthor = async (title) => {
     try {
       const input = title.split(",");
@@ -119,6 +128,7 @@ export const LibraryContext = ({ children }) => {
     }
   }
 
+   // Function to Remove author
   const removeAuthor = async (id) => {
     try {
       setAuthorLists(authorLists.filter((author) => author.id != id))
@@ -129,6 +139,7 @@ export const LibraryContext = ({ children }) => {
     }
   }
 
+   // Function to Update a author
   const updateAuthor = async (data) => {
     try {
       const input = data.split(",");
