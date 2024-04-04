@@ -32,15 +32,28 @@
 </ul>
 <br>
 <h3>Deployed URL</h3>
-
+https://librarymanagementadmin.netlify.app/
 <br>
 
 <h5>Screenshots</h5>
-1.Home Page
-<img src="./src/assets/screenshot.png">
-
-2.User updating Page
+1. Dashboard Page
 <img src="./src/assets/screenshot1.png">
 
-3.User adding page
+2. Books Page
 <img src="./src/assets/screenshot2.png">
+
+3. Authors page
+<img src="./src/assets/screenshot3.png">
+
+4. Add Book Page
+<img src="./src/assets/screenshot4.png">
+
+5. Add Author Page
+<img src="./src/assets/screenshot5.png">
+
+6. Edit Book page
+<img src="./src/assets/screenshot6.png">
+
+7. Edit Authors page
+<img src="./src/assets/screenshot7.png">
+
