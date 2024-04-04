@@ -119,7 +119,7 @@ const EditBook = () => {
               <Link to={'/searchbooks'} className='card-button text-decoration-none me-2' type='submit' onClick={() => updateBook(
                 `${urlId.id},${formik.values.title}, ${formik.values.author}, ${formik.values.isbnNumber}, ${formik.values.publicationDate}`
               )}>Update</Link>
-              <Link to={'/searchbooks'} className='card-button text-decoration-none ms-2' type='submit' onClick={() => cancelEdit()}>Cancel</Link>
+              <Link to={'/'} className='card-button text-decoration-none ms-2' type='submit' onClick={() => cancelEdit()}>Cancel</Link>
             </div>
           </div>
         </form>

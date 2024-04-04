@@ -92,7 +92,7 @@ const EditAuthor = () => {
               <Link to={'/searchAuthors'} type="submit" className='card-button card-button text-decoration-none me-2' onClick={() => updateAuthor(
                 `${urlID.id},${formik.values.name}, ${formik.values.birth}, ${formik.values.bio}`
               )}>Update Author</Link>
-              <Link to={'/searchAuthors'} type='submit' className='card-button card-button text-decoration-none ms-2' onClick={cancelEdit}>Cancel</Link>
+              <Link to={'/'} type='submit' className='card-button card-button text-decoration-none ms-2' onClick={cancelEdit}>Cancel</Link>
             </div>
           </div>
         </form>
